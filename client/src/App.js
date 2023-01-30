@@ -1,21 +1,43 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
-import Page from './pages/Page';
-
+import { Route } from "react-router-dom";
+import LandingPage from "./components/LandingPage/LandingPage.jsx"
+import NavBar from "./components/Navbar/Navbar.jsx"
+import Home from "./containers/Home/Home.jsx"
+import Search from "./containers/Search/Search";
+import Create from "./containers/Create/Create.jsx"
+import About from "./components/About/About.jsx"
+import Details from "./containers/Details/Details.jsx";
+import "./App.css";
 
 function App() {
-  return (
-    <div className='app'>
-      <Router>
-        <Switch>
-          <Route path="/"> <LandingPage /> </Route>
-          <Route path="/home"> <Page /> </Route>
-        </Switch>
-      </Router>
-    </div>
 
+  return (
+    <div className="App">
+      <React.Fragment>
+        <Route exact path="/" component={LandingPage} />
+
+        <Route path="/home" component={NavBar} />
+        <Route exact path="/home" component={Home} />
+
+        <Route path="/results" component={NavBar} />
+        <Route
+          exact path="/results/:name"
+          component={Search} 
+        />
+
+        <Route path="/videogames" component={NavBar} />
+        <Route
+          exact path="/videogames/:id"
+          render={({ match }) => < Details id={match.params.id} />}
+        />
+
+        <Route path="/create" component={NavBar} />
+        <Route path="/create" exact component={Create} />
+
+        <Route path="/about" component={NavBar} />
+        <Route path="/about" component={About} />
+        
+      </React.Fragment>
+    </div>
   );
 }
-
-export default App;

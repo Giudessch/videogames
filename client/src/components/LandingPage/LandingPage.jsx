@@ -12,9 +12,8 @@ export default function LandingPage() {
       </div>
       <div>
         <Link to="/home">
-          <input type="submit" value="Ir a Juegos" className={style.myButton} />
+          <input type="submit" value="Go to Games" className={style.myButton} />
         </Link>
-        <h3 className={style.love}>Hecho con &hearts; para henry</h3>
       </div>
     </div>
    
