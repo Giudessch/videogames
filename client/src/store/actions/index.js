@@ -71,7 +71,8 @@ export function getVideogames() {
     };
   };
   
-  // este necesito que me expliques!
+  // este necesito que me expliques! PARA FILTRAR Y ORDENAR TODO LO DE LA API Y DB
+  //ADEMAS NO SE ME MUESTRA EN PANTALLA PARA IR HACIENDOLE TODO LO Q ES CSS
   export const filterByGenre = (genres) => (dispatch, getState) => {
     let filteredGames = [];
   
