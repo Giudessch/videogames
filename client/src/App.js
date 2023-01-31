@@ -1,12 +1,11 @@
 import React from 'react';
 import { Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage/LandingPage.jsx"
-import NavBar from "./components/Navbar/Navbar.jsx"
-import Home from "./containers/Home/Home.jsx"
-import Search from "./containers/Search/Search";
+import NavBar from "./components/NavBar/NavBar.jsx"
+import Home from "./containers/Home/home.jsx"
 import Create from "./containers/Create/Create.jsx"
 import About from "./components/About/About.jsx"
-import Details from "./containers/Details/Details.jsx";
+import Details from "./containers/Details/details.jsx";
 import "./App.css";
 
 function App() {
@@ -20,11 +19,6 @@ function App() {
         <Route exact path="/home" component={Home} />
 
         <Route path="/results" component={NavBar} />
-        <Route
-          exact path="/results/:name"
-          component={Search} 
-        />
-
         <Route path="/videogames" component={NavBar} />
         <Route
           exact path="/videogames/:id"
@@ -41,3 +35,5 @@ function App() {
     </div>
   );
 }
+
+export default App;

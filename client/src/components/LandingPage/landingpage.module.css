@@ -1,9 +1,5 @@
-
- @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:wght@100&display=swap');
-
 body {
-    background-image: url(./fondo2.jpg);
+    /* background-image: url(./fondo2.jpg); */
     font-family: 'Raleway', sans-serif;
 }
 .container {

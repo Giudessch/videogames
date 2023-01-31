@@ -5,7 +5,6 @@ import style from "./landingpage.module.css"
 
 export default function LandingPage() {
   return (
-    <body>
     <div className={style.container}>
       <div>
         <h1>VideoGames</h1>
@@ -16,7 +15,4 @@ export default function LandingPage() {
         </Link>
       </div>
     </div>
-   
-  </body>
-  )
-}
+)}

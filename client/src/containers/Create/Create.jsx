@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createVideogame, getGenres } from '../../store/actions';
-import './Create.css';
+import style from "./create.module.css";
 
 export default function Create() {
 	const dispatch = useDispatch();

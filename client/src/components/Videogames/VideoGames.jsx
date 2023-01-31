@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../../components/Card/Card";
 import Loading from "../../components/Loading/Loading";
-import "./Videogames.module.css"
+import style from "./videoGames.module.css"
 
 export default function Videogames ({videogames}) {
   return (

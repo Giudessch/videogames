@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {getGenres, filterByGenre, orderByCreator, orderAsc, orderDesc} from '../../store/actions';
-import './Filter.module.css';
+import style from './filter.module.css';
 
 
 export function Filter({ paginate }) {

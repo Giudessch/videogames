@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import NotFound from '../../components/NotFound/NotFound';
-import './Card.module.css';
+import NotFound from '../NotFound/NotFound.jsx';
+import style from './card.module.css';
 
 function Card({data}) {
 	return (

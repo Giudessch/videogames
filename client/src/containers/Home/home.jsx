@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideogames, resetAll } from '../../store/actions';
-import Videogames from '../../components/Videogames/Videogames';
+import Videogames from '../../components/Videogames/VideoGames';
 import { Pagination } from '../../components/Pagination/Pagination';
 import { Filter } from '../Filter/Filter';
-import './Home.css';
+import style from './home.module.css';
 
 export default function Home() {
 	const dispatch = useDispatch();

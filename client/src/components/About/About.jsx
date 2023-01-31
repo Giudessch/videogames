@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.module.css';
+import './about.module.css';
 
 function About() {
 	return (
@@ -16,7 +16,7 @@ function About() {
 				</h4>
 			</div>
 			<div className='logos'>
-				<img className='img1' src={reactlogo} alt='Link caido' />
+			<img className='img1' alt='Link caido' />
 				
 			</div>
 		</div>

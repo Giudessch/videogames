@@ -1,5 +1,6 @@
 import React from "react";
-import "./Pagination.module.css";
+import style from "./pagination.module.css";
+
 
 export const Pagination = ({ videogamesPerPage, totalVideogames, paginate }) => {
   const pageNumbers = [];
