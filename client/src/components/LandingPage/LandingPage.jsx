@@ -6,13 +6,9 @@ import style from "./landingpage.module.css"
 export default function LandingPage() {
   return (
     <div className={style.container}>
-      <div>
-        <h1>VideoGames</h1>
-      </div>
-      <div>
+      <h1 className={style.bienvenidos}>BIENVENIDOS AL PROYECTO INDIVIUAL VIDEOGAMES</h1>
         <Link to="/home">
-          <input type="submit" value="Go to Games" className={style.myButton} />
+          <input type="submit" value="Ir a Juegos" className={style.myButton} />
         </Link>
-      </div>
     </div>
 )}

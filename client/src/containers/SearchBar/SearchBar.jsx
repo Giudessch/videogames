@@ -2,21 +2,22 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { searchVideogames } from '../../store/actions';
-import Videogames from "../../components/Videogames/Videogames";
+import Videogames from "../../components/Videogames/VideoGames";
 import { Pagination } from "../../components/Pagination/Pagination";
 import NotFound from "../../components/NotFound/NotFound";
-import "./Search.css";
+import style from "./SearchBar.module.css";
 
 export default function Search() {
   const dispatch = useDispatch();
-  let { name } = useParams()
+  const { name } = useParams()
 
   const searchVideogame = useSelector((state) => state.searchVideogameByName);
 
   useEffect(() => {
+    console.log(name);
     dispatch(searchVideogames(name));
-  }, [name]); // eslint-disable-line react-hooks/exhaustive-deps
-  
+  }, [name]);
+
   // Paginacion
   function paginate(e, num) {
     e.preventDefault();
@@ -32,7 +33,7 @@ export default function Search() {
 
   return (
     <div className="search">
-        {searchVideogame.length > 0 ?
+      {searchVideogame.length > 0 ?
         <>
           <h1>Results with {name}!</h1>
           <Videogames videogames={currentPageGames} />
@@ -43,7 +44,8 @@ export default function Search() {
           />
         </>
         : <NotFound image={"nogames"} />
-        }
+      }
+
     </div>
   )
 };

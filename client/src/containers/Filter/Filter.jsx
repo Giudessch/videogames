@@ -44,34 +44,32 @@ export function Filter({ paginate }) {
 	};
 
 	return (
-		<div className='filter'>
+		<div className={style.conteiner}>
 			<div>
-				<div>Filtrado por Genrero</div>
+				<div>Genero</div>
 				<select onChange={(e) => handleFilter(e)}>
-					<option default>All</option>
+					<option default> Todos</option>
 					{genres.map((G) => (
-						<option value={G.name}>{G.name}</option>
+						<option key={G.id} value={G.name}>{G.name}</option>
 					))}
 				</select>
 			</div>
 			<div>
-				<div>Ordenamiento</div>
+				<div>Ordenar</div>
 				<select onChange={(e) => handleOrder(e)}>
-					<option value='All' default>
-						All
-					</option>
-					<option value='asc_name'>Alphabetically (A-Z)</option>
-					<option value='desc_name'>Alphabetically (Z-A)</option>
-					<option value='asc_rating'>Rating (Lower-Higher)</option>
-					<option value='desc_rating'>Rating (Higher-Lower)</option>
+					<option value='All' default> Todos</option>
+					<option value='asc_name'>Alfabeticamente (A-Z)</option>
+					<option value='desc_name'>Alfabeticamente (Z-A)</option>
+					<option value='asc_rating'>Clasificación (Bajo - Alto)</option>
+					<option value='desc_rating'>Clasificación (Alto - Bajo)</option>
 				</select>
 			</div>
 			<div>
-				<div>filtrado Api / Db</div>
+				<div> Filtrado Api / Db </div>
 				<select onChange={(e) => handleCreator(e)}>
-					<option default>All</option>
-					<option value='Api'>Api videogames</option>
-					<option value='Created'>User videogames</option>
+					<option default> Todos </option>
+					<option value='Api'> Api VideoGames </option>
+					<option value='Created'>User VideoGames</option>
 				</select>
 			</div>
 		</div>

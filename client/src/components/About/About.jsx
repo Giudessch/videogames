@@ -1,9 +1,9 @@
 import React from 'react';
-import './about.module.css';
+import style from'./about.module.css';
 
 function About() {
 	return (
-		<div className='about'>
+		<div className={style.about}>
 			<h1>About Videogames!</h1>
 			<div>
 				<h4>
@@ -11,13 +11,8 @@ function About() {
 					{<a href='https://rawg.io/apidocs'>RAWG</a>} API.
 				</h4>
 				<h4>
-					Develop Hevert David Gelis Diaz for individual project for Henry
-					Bootcamp.
+				Videogames web project developed by Giuliana Desiree Schiebelbein for Soy Henry's BOTCAMP.
 				</h4>
-			</div>
-			<div className='logos'>
-			<img className='img1' alt='Link caido' />
-				
 			</div>
 		</div>
 	);

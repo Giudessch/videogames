@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFF712;
+    color: gray;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 11px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow: 10px 2px 14px rgba(0, 0, 0, 0.1);
+}
+
+.continer h1 {
+    display: flex;
+    color: black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 8px 0px;
+}
+
+.divTitles {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkboxs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.genreOptions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.option {
+    width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+}
+
+.perro {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.checks {
+    width: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.checks input:hover {
+    cursor: pointer;
+}
+
+.imagediv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.imagein {
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: none;
+    margin: 5px;
+}
+
+.buttonCreate{
+    background-color: white;    
+    border:none;
+    color:black;
+    font-size: 15px;
+    cursor: pointer;
+}

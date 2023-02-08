@@ -7,6 +7,7 @@ import Create from "./containers/Create/Create.jsx"
 import About from "./components/About/About.jsx"
 import Details from "./containers/Details/details.jsx";
 import "./App.css";
+import Search from './containers/SearchBar/SearchBar.jsx';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
         <Route path="/home" component={NavBar} />
         <Route exact path="/home" component={Home} />
 
-        <Route path="/results" component={NavBar} />
+        <Route path="/results/:name" component={Search} />
         <Route path="/videogames" component={NavBar} />
         <Route
           exact path="/videogames/:id"

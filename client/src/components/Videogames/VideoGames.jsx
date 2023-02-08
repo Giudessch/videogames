@@ -5,9 +5,9 @@ import style from "./videoGames.module.css"
 
 export default function Videogames ({videogames}) {
   return (
-    <div className="showing">
+    <div className={style.videogames}>
       {videogames.length > 0 ?
-      videogames.map((data) => (<Card data={data} />))
+      videogames.map((data) => (<Card key={data.id} data={data} />))
       : <Loading />
       }
     </div>

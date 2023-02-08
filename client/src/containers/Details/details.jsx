@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getVideogameById } from '../../store/actions';
-import NotFound from '../../components/NotFound/NotFound.jsx';;
+import NotFound from '../../components/NotFound/NotFound.jsx';
+import style from './details.module.css'
 
 function GameDetail({ id }) {
   const dispatch = useDispatch();
@@ -10,28 +11,28 @@ function GameDetail({ id }) {
 
   useEffect(() => {
     dispatch(getVideogameById(id));
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  return (    
-    <div className="full">
+  }, []); 
+  
+  return (
+    <div className={style.container}>
       <div className="info">
-        <div className="image">
-              {videogame.image === null || !videogame.image ?
-              <NotFound image={"noimage"} />
-              : <img src={videogame.image} alt={videogame.name} /> }
-              <div>
-                <h1>{videogame.name} </h1>
-                <h5>({videogame.released})</h5>
-              </div>
+        <div className={style.image}>
+          {videogame.image === null || !videogame.image ?
+            <NotFound image={"noimage"} style={style}/>
+            : <img src={videogame.image} alt={videogame.name} />}
+          <div>
+            <h1>{videogame.name} </h1>
+            <h5>({videogame.released})</h5>
+          </div>
         </div>
         <div className="details">
           <div className="text">
-            <h2>About this game:</h2>
+            <h2> Descripcion:</h2>
             <p>{videogame.description}</p>
           </div>
           <div className="Genres">
             <div className="genres">
-            It's an {videogame.genres} game ranked at {videogame.rating} points.  
+              It's an {videogame.genres} game ranked at {videogame.rating} points.
             </div>
           </div>
           <div className="Platforms">
@@ -42,9 +43,9 @@ function GameDetail({ id }) {
         </div>
       </div>
       <Link to="/home">
-          <button className="button" type="submit">🡸</button>
+        <button className="button" type="submit">🡸</button>
       </Link>
-    </div>    
+    </div>
   );
 }
 

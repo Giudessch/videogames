@@ -1,3 +1,22 @@
-.full{
-    text-align: center
-};
+.container{
+    color: black;
+    display: flex;
+	justify-content: center;
+	background: #FFF712;
+	color: gray;
+	padding-left: 50px;
+    padding-right: 50px;
+	border-radius: 11px;
+    margin-left: 10px;
+    margin-top: 10px;
+    box-shadow: 10px 2px 14px rgba(0, 0, 0, 0.1);
+	box-sizing: content-box;
+    font-family: 'Poppins', sans-serif;
+}
+.image img {
+    width: 100px;
+    height: 24vh;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+} 

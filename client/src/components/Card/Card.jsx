@@ -5,15 +5,15 @@ import style from './card.module.css';
 
 function Card({data}) {
 	return (
-		<div className='card'>
+		<div className={style.card}>
 			<Link to={`/videogames/${data.id}`}>
 				{data.image === null || !data.image ? (
-					<NotFound image={'noimage'} />
+					<NotFound image={'noimage'} style={style}/>
 				) : (
-					<img className='img' src={data.image} alt={data.name} />
+					<img className={style.img} src={data.image} alt={data.name} />
 				)}
 			</Link>
-			<div className='textCard'>
+			<div className={style.cardText}>
 				<div className='nameGenres'>
 					<div className='name'>{data.name}</div>
 					<div className='genres'>{data.genres}</div>

@@ -6,7 +6,6 @@ const { Genre } = require('../db.js');
 
 const router = Router();
 
-// Obtengo los genres desde la API y los guardo en la DB
 
 router.get('/', async function (req, res) {
     try{

@@ -1,4 +1,15 @@
-
+.videogames{
+    flex-wrap: wrap;
+    width: 100%;
+    right: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 40px auto 100px auto;
+}
 
 
 /* .container_cards{
