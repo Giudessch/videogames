@@ -13,17 +13,17 @@ router.post('/', async (req, res) => {
     let gameCreated = await Videogame.create({
       name,
       description,
-      image, 
+      image,
       released,
       rating,
       platforms: platformString,
     })
 
     genres.forEach(async (G) => {
-        let genresGame = await Genre.findOne({ where: { name: G } })
-        await gameCreated.addGenre(genresGame)
-  })
-     res.send('Videogame created successfully!')
+      let genresGame = await Genre.findOne({ where: { name: G } })
+      await gameCreated.addGenre(genresGame)
+    })
+    res.send('Videogame created successfully!')
 
   } catch (err) {
     res.status(404).json({ err })
